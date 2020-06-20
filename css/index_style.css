@@ -5,7 +5,16 @@ body {
 }
 .btn
 {
+  border-width: 2px;
   font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+.btn1
+{
+  color:#0b0c10!important;
+  background-color: #66fcf1 !important;
 }
 .navbar {
   overflow: hidden;
@@ -15,6 +24,7 @@ body {
 }
 #logo
 {
+  color: #66fcf1;
   float: left;
   display: block;
 }
@@ -25,28 +35,33 @@ body {
 .navbar a {
   float: right;
   display: block;
-  color: #05386B;
+  color: #66fcf1;
   margin-top: 10px;
-  margin-left: 10px;
+  border-color: #66fcf1;
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
   font-weight: bolder;
 }
-
-.navbar a:hover {
-  background: #05386B;
-  transition: ease-in 0.5s;
-  color: #EDF5E1;
+.btn:hover
+{
+  box-shadow: 0px 5px 33px 4px #45a29e;
+  background: #0b0c10 !important;
+  transition: ease-in-out 0.7s;
+  border-color:#66fcf1 !important;
+ 
+  color: #66fcf1 !important;
   border-radius: 30px;
 }
 h2
 {
+  color: #66fcf1;
   font-family: 'Roboto Slab', serif;
 }
 h3
-{font-family: 'Bebas Neue', cursive;
-font-size: 20px;
+{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
 }
 .first
 {

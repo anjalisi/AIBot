@@ -1,19 +1,18 @@
 .card
 {
 	margin-top: 4%;
-	background-color: #8EE4AF;
+	background-color: #0b0c10;
 	color: white;
-	-webkit-box-shadow: 0px 10px 5px 7px #05386B;
-	-moz-box-shadow: 0px 0px 5px 7px #05386B;
-	box-shadow: 0px 16px 33px 4px #05386B;
+	box-shadow: 0px 2px 10px 2px #45a29e;
 }
 ::placeholder {
-  color: #05386B;
+  font-family: 'Roboto Slab', serif;
+  color: #1f2833;
 }
 p
 {
-	font-size: 30px;
-	color: #EDF5E1;
+	font-size: 19px;
+	color: #c5c6c7;
 }
 img
 {
@@ -21,27 +20,28 @@ img
 }
 .text-input
 {
-	border-radius: 15px; 
-  background-color: #EDF5E1;
-  color: #05386B;
+	border-radius: 10px; 
+  background-color: #45a29e;
+  color: #1f2833;
 	width: 75%;
 	border: none;
 	outline: none;
 	padding: 6px;
-	font-size: 17px;
+  padding-left: 15px;
+	font-size: 16px;
 }
 input:-internal-autofill-selected
 {
-  color: #05386B;
+  color: #1f2833;
 }
 .submit
 {
-
   font-family: 'Roboto Mono', monospace;	
-  background-color: #05386B;
-  color:#EDF5E1;
-  border-width:0px;
-  width: 60%;
+  background-color: #0b0c10;
+  color:#66fcf1;
+  border-color: #66fcf1;
+  border-width:2px;
+  width: 65%;
   border-radius: 15px;
   font-size: 22px;
   font-weight: bold;
@@ -52,17 +52,10 @@ input:-internal-autofill-selected
 }
 .submit:hover
 {
-	box-shadow: 0px 16px 33px 4px #05386B;
-  color: #EDF5E1;
+	box-shadow: 0px 2px 13px 3px #45a29e;
+  color: #0b0c10;
+  border-color: #45a29e;
   transition: ease-in-out 0.3s;
-  background-color: #379683;
+  background-color: #45a29e;
 }
-.btn:hover
-{
 
-	box-shadow: 0px 5px 33px 4px #05386B;
-  color: #EDF5E1;
-  transition: ease-in-out 0.3s;
-  background-color: #379683;
-
-}
