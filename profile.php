@@ -6,11 +6,20 @@ if(!isset($_SESSION['userid']))
 	header('Location:login.php');
 	return;
 }
+$email=$_SESSION['userid'];
+$stmt= $pdo->query("SELECT user_id FROM users where email='$email'");
+$rows= $stmt->fetch(PDO::FETCH_ASSOC);
+$user_id= htmlentities($rows['user_id']);
+
+$stmt1= $pdo->query("SELECT * FROM users where user_id='$user_id'");
+$rows1= $stmt1->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard- Applicant</title>
+	<title>Profile-Applicant</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,10 +30,10 @@ if(!isset($_SESSION['userid']))
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 </head>
-<body>	
-	<div class="sidebar">
-	  <a class="active first" href="dashboard-applicant.php">DASHBOARD</a>
-	  <a href="profile.php">PROFILE</a>
+<body>
+<div class="sidebar">
+	  <a class="first" href="dashboard-applicant.php">DASHBOARD</a>
+	  <a href="profile.php" class="active">PROFILE</a>
 	  <a href="#news">CHATBOT</a>
 	  <a href="#contact">ABOUT</a>
 	  <a href="logout.php">LOGOUT</a>
@@ -35,6 +44,9 @@ if(!isset($_SESSION['userid']))
 			<li><i class="fa fa-user-circle-o icon"></i><a href="#" id="username" style="font-family: 'Roboto Mono', monospace;">Hi! <?php echo $_SESSION["userid"]; ?></a></li>
 		</ul>
 	</nav>
+	<div>
+		
+	</div>
 </div>
 </body>
 </html>

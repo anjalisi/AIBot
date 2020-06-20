@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: #0b0c10;
+  font-family: 'Poppins', sans-serif;
+   overflow-x: hidden;
+}
+.navbar
+{
+  background-color: #45a29e;
+  overflow: hidden;
+  height: 75px;
+}
+.navbar a
+{
+  float: left;
+  display: block;
+  color: #0b0c10;
+  text-align: center;
+  padding: 17px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#username
+{ 
+  font-size: 25px;
+  display: block;
+}
+#username:hover
+{
+  color: #0b0c10;
+  background-color:#45a29e ;
+}
+.navbar ul
+{
+  list-style: none;
+  margin: 8px 0 0 0; 
+}
+.icon
+{
+  margin-top: 6px;
+  float: left;
+  color:#0b0c10;
+  font-size:40px;
+}
+.content
+{
+  margin-left: 270px;
+}
+.first
+{
+  margin-top: 40px;
+}
+.sidebar {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  background-color: #45a29e;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  font-size: 18px;
+  color: black;
+  padding: 16px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.sidebar a.active {
+  background-color: #1f2833;
+  color: #66fcf1;
+  border-right: white;
+}
+
+.sidebar a:hover:not(.active) {
+  transition: 0.4s ease-in-out;
+  background-color: #1f2833;
+  color: #c5c6c7;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
