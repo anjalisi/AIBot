@@ -67,7 +67,7 @@ if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
 <body>
 	<!-- Menu Bar -->
 <div class="navbar container-fluid">
-	<a href="freelancer_login.php" role="button" class="btn btn-lg btn1">
+	<a href="login.php" role="button" class="btn btn-lg btn1">
 		LOGIN 
 	</a>
 	<a href="registration.php" role="button" class="btn btn-lg">
