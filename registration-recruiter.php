@@ -2,10 +2,10 @@
 session_start();
 require_once "connect.php";
 
-if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
+if(isset($_POST['email']) && isset($_POST['company']) && isset($_POST['pass']))
 {
-	unset($_SESSION['userid']);
-	$sql_u= "select * from users where email=:email";
+	unset($_SESSION['recid']);
+	$sql_u= "select * from recruiter where email=:email";
 	$stmt1=$pdo->prepare($sql_u);
 	$stmt1->execute(array(
 		':email' => $_POST['email']
@@ -14,37 +14,36 @@ if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
 	if($count > 0)  
 	{  
 		$_SESSION['error'] = "Seems Like the User Already Exists";
-        header("Location: registration.php");
+        header("Location: registration-recruiter.php");
         return; 
 	}  
 	if(strcmp($_POST['pass'], $_POST['repass'])==0){
-	$sql="INSERT INTO users(firstn,lastn, email, dob,linkedin,resume,password)
-	 values(:first,:last, :email,:dob,:link,:resume,:pass)";
+	$sql="INSERT INTO recruiter(company,email, website, linkedin,profile,password)
+	 values(:company,:email,:website,:link,:profile,:pass)";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute(array(
-		':first' => $_POST['firstn'],
-		':last' => $_POST['lastn'],
+		':company' => $_POST['company'],
 		':email' => $_POST['email'],
-		':dob' => $_POST['dob'],
+		':website' => $_POST['website'],
 		':link' => $_POST['link'],
-		':resume' => $_POST['resume'],
+		':profile' => $_POST['profile'],
 		':pass' => $_POST['pass'],
 	));
 	$_SESSION['success'] = 'Record Added';
-	$_SESSION['userid'] = $_POST['email'];
-	header("Location:dashboard-applicant.php");
+	$_SESSION['recid'] = $_POST['email'];
+	header("Location:dashboard-recruiter.php");
 	return;
 	}
 	else if(strcmp($_POST['pass'], $_POST['repass'])!=0)
 	{
 		$_SESSION['error'] = "Passwords Did Not Match";
-        header("Location: registration.php");
+        header("Location: registration-recruiter.php");
         return;
 	}
 	else
 	{
 		$_SESSION['error'] = "Seems Like the User Already Exists";
-        header("Location: registration.php");
+        header("Location: registration-recruiter.php");
         return;
 	}
 }
@@ -52,7 +51,7 @@ if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration</title>
+	<title>Registration-Recruiter</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -67,10 +66,10 @@ if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
 <body>
 	<!-- Menu Bar -->
 <div class="navbar container-fluid">
-	<a href="login.php" role="button" class="btn btn-lg btn1">
+	<a href="login-recruiter.php" role="button" class="btn btn-lg btn1">
 		LOGIN 
 	</a>
-	<a href="registration.php" role="button" class="btn btn-lg">
+	<a href="registration-recruiter.php" role="button" class="btn btn-lg">
 		REGISTER
 	</a>
 	<a href="index.php" id="logo">AIBot</a>
@@ -93,24 +92,20 @@ if(isset($_POST['email']) && isset($_POST['firstn']) && isset($_POST['pass']))
 		</div>
 		<div class="col-sm-10">
 		<form method="post">
-			<p>First Name </p>
-			<input class="text-input" type="name" pattern="^[a-zA-Z ][a-zA-Z0-9-_. ]*$" name="firstn" id="name" placeholder="Name" required>
+			<p>Company </p>
+			<input class="text-input" type="name" pattern="^[a-zA-Z ][a-zA-Z0-9-_., ]*$" name="company" id="company" placeholder="Name " required>
 			<br><br>
-			
-			<p>Last Name </p>
-			<input class="text-input" type="name" pattern="^[a-zA-Z ][a-zA-Z0-9-_. ]*$" name="lastn" id="name" placeholder="Name" required>
-		<br><br>
 			<p>Email  </p>
 			<input class="text-input" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" placeholder="Email ID" required />
 			<br><br>
-			<p>DOB </p>
-			<input class="text-input" type="date" pattern="^[a-zA-Z ][a-zA-Z0-9-_. ]*$" name="dob" id="dob" placeholder="Name" required>
+			<p>Website </p>
+			<input class="text-input" type="text" name="website" id="website" placeholder="Enter URL">
 			<br><br>
 			<p>LinkedIn </p>
-			<input class="text-input" type="name" name="link" id="link" placeholder="Profile URL(if any)" />
+			<input class="text-input" type="text" name="link" id="link" placeholder="Enter URL" />
 			<br><br>
-			<p>Resume </p>
-			<input class="text-input" type="name" name="resume" id="resume" placeholder="Google Drive URL" required>
+			<p>Profile </p>
+			<input class="text-input" type="text" name="profile" id="profile" placeholder="Job Profile" required>
 			<br><Br>
 			<p>Password</p>
 			<input class="text-input" type="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
