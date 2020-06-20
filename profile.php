@@ -13,7 +13,11 @@ $user_id= htmlentities($rows['user_id']);
 
 $stmt1= $pdo->query("SELECT * FROM users where user_id='$user_id'");
 $rows1= $stmt1->fetch(PDO::FETCH_ASSOC);
-
+$fname= htmlentities($rows1['firstn']);
+$lname= htmlentities($rows1['lastn']);
+$dob=htmlentities($rows1['dob']);
+$linkedin= htmlentities($rows1['linkedin']);
+$resume=htmlentities($rows1['resume']);
 
 ?>
 <!DOCTYPE html>
@@ -44,8 +48,62 @@ $rows1= $stmt1->fetch(PDO::FETCH_ASSOC);
 			<li><i class="fa fa-user-circle-o icon"></i><a href="#" id="username" style="font-family: 'Roboto Mono', monospace;">Hi! <?php echo $_SESSION["userid"]; ?></a></li>
 		</ul>
 	</nav>
-	<div>
-		
+	<div class="container-fluid">
+		<center><img src="images/research.png"></center>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>First Name</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$fname ?></p>
+			</div>
+		</div>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>Last Name</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$lname?></p>
+			</div>
+		</div>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>Email</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$email ?></p>
+			</div>
+		</div>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>LinkedIn</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$linkedin ?></p>
+			</div>
+		</div>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>Resume</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$resume ?></p>
+			</div>
+		</div>
+		<div class="row"><br>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<p>Date Of Birth</p>
+			</div>
+			<div class="col-sm-6">
+				<p><?=$dob ?></p>
+			</div>
+		</div>
 	</div>
 </div>
 </body>

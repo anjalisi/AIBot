@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background-color: #0b0c10;
-  font-family: 'Poppins', sans-serif;
    overflow-x: hidden;
 }
 .navbar
@@ -96,4 +95,10 @@ body {
     text-align: center;
     float: none;
   }
+}
+p
+{
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  color: #66fcf1;
 }
