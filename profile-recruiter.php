@@ -38,12 +38,12 @@ $resume=htmlentities($rows1['linkedin']);
 <body>
 <div class="sidebar">
 	  <a class="first" href="dashboard-recruiter.php">DASHBOARD</a>
+	  <a href="shortlist.php">SHORTLISTED</a>
+	  <a href="#">INTERVIEW</a>
 	  <a href="profile-recruiter.php" class="active">PROFILE</a>
-
-	  <a href="#contact">ABOUT</a>
 	  <a href="logout-recruiter.php">LOGOUT</a>
 	</div>
-<div class="content">
+	<div class="content">
 	<nav class="navbar container-fluid">
 		<ul class="navbar-nav" id="navbar-id">
 			<li><i class="fa fa-user-circle-o icon"></i><a href="#" id="username" style="font-family: 'Roboto Mono', monospace;">Hi! <?php echo $_SESSION["recid"]; ?></a></li>
