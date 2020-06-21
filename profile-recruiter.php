@@ -39,7 +39,7 @@ $resume=htmlentities($rows1['linkedin']);
 <div class="sidebar">
 	  <a class="first" href="dashboard-recruiter.php">DASHBOARD</a>
 	  <a href="profile-recruiter.php" class="active">PROFILE</a>
-	  <a href="#news">CHATBOT</a>
+
 	  <a href="#contact">ABOUT</a>
 	  <a href="logout-recruiter.php">LOGOUT</a>
 	</div>
