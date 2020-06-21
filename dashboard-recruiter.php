@@ -36,7 +36,6 @@ $numrows2=count($rows2);
 	<div class="sidebar">
 	  <a class="active first" href="dashboard-recruiter.php">DASHBOARD</a>
 	  <a href="shortlist.php">SHORTLISTED</a>
-	  <a href="interview.php">INTERVIEW</a>
 	  <a href="profile-recruiter.php">PROFILE</a>
 	  <a href="logout-recruiter.php">LOGOUT</a>
 	</div>

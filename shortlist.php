@@ -29,7 +29,7 @@ $rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<div class="sidebar">
 	  <a class="first" href="dashboard-recruiter.php">DASHBOARD</a>
 	  <a href="shortlist.php" class="active">SHORTLISTED</a>
-	  <a href="interview.php">INTERVIEW</a>
+
 	  <a href="profile-recruiter.php">PROFILE</a>
 	  <a href="logout-recruiter.php">LOGOUT</a>
 	</div>
