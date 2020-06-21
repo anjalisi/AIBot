@@ -1,98 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>AIBot</title>
+  <head>
+    <title>AIBot</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/index_style.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-</head>
-<body>
-	<div class="navbar container-fluid">
-			<a href="login-recruiter.php" role="button" class="btn btn-lg">
-				LOGIN AS RECRUITER
-			</a>
-			<a href="login.php" role="button" class="btn btn-lg">
-				LOGIN AS APPLICANT
-			</a>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Source+Code+Pro:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index_style.css" />
+  </head>
+  <body>
+    <div class="navbar container-fluid">
+      <a href="login-recruiter.php" role="button" class="btn btn-lg">
+        LOGIN AS RECRUITER
+      </a>
+      <a href="login.php" role="button" class="btn btn-lg">
+        LOGIN AS APPLICANT
+      </a>
 
-			<a href="index.php" id="logo">AIBot</a>
-		</div>
-	<div class="container-fluid">
-		<div class="row row-1">
-			<center><h1 class="first">Manage your job applications with</h1><h1> full tranparency using</h1>
-				<h1 >AIBot!!</h1>
-				<BR>
-				<p>A web-app to decrease the workload from <br>the recruiters, and to make the recruitement process more diverse.</p><br><br><br>
-				<a href="registration.php" class="btn btn-color btn-lg" role="button">
-					JOIN AS APPLICANT
-				</a>
-				<a href="registration-recruiter.php" class="btn btn-color btn-lg" role="button">
-					JOIN AS RECRUITER
-				</a>
-			</center>
-		</div>
-	</div>
-	<div class="container-fluid tab2">
-		<div class="row row-3">
-			<center><br><br>
-				<h2>How Does This Work?</h2><br>
-				<p>The main idea of this is to ease the workload of the recruiters, by only giving them the shortlisted applicants. It also makes the recruitement process a lot easier for the applicants. Anyone can apply for any job, but before that, they have to qualify a certain test. <br>
-					Baaki add kadio mereko samajh nahi aaraha hai.<br><br><br>
-				</p>
-			</center>
-		</div>
-	</div>
-	<div class="container-fluid tab3">
-		<div class="row row-2">
-			<center><br><br>
-				<h2> Why BillDesk?</h2>
-			</center>
-			<br><br>
-			<div class="row">
-				<div class="col-sm-6 cols">
-					<center>
-						<i class="fa fa-bell-o icons"></i>
-						<h3> NOTIFICATIONS</h3>
-						<p>Reminds a week before renewal date of inventory,<br> and two months before the expiry of goods.</p>
-					</center>				
-				</div>
-				<div class="col-sm-6 cols">
-					<center>
-						<i class="fa fa-credit-card-alt icons"></i>
-						<h3>CREATING BILLS</h3>
-						<p>Helps in creation of SMS bills for cafes/restaurants,<br> and has a customizable invoice generator for startups or freelancers.</p>
-					</center>				
-				</div>
-			</div>
-			<br><br><br>
-			<div class="row">
-				<div class="col-sm-6 cols">
-					<center>
-						<i class="fa fa-cutlery icons"></i>
-						<h3>ADD ITEMS</h3>
-						<p>Add or remove items from your inventory.<br> 
-						It helps you keep a check on the raw materials.</p>
-					</center>				
-				</div>
-				<div class="col-sm-6 cols">
-					<center>
-						<i class="fa fa-money icons"></i>
-						<h3>MANAGE SELLINGS</h3>
-						<p>You can supervise your sellings and savings by the end <br>of each month.All the bills generated are kept at one place.</p>
-					</center>				
-				</div>
-			</div>
-			<br><br>
-		</div>
-	</div>
-</body>
+      <a href="index.php" id="logo">AIBot</a>
+    </div>
+    <div class="container-fluid">
+      <div class="row row-1">
+        <center>
+          <h1 class="first">Get your dream job</h1>
+          <h1>without struggling with the interview rush using</h1>
+          <h1>our AI based Recruiter ChatBot!</h1>
+          <br />
+          <p>
+            A web-app to ease the workload of <br />the recruiters, and to make
+            the recruitement process hassle-free and transparent.
+          </p>
+          <br /><br /><br />
+          <a href="registration.php" class="btn btn-color btn-lg" role="button">
+            JOIN AS APPLICANT
+          </a>
+          <a
+            href="registration-recruiter.php"
+            class="btn btn-color btn-lg"
+            role="button"
+          >
+            JOIN AS RECRUITER
+          </a>
+        </center>
+      </div>
+    </div>
+    <div class="container-fluid tab2">
+      <div class="row row-3">
+        <center>
+          <br /><br />
+          <h2>How Does This Work?</h2>
+          <br />
+          <p>
+            The idea behind this app is to make the recruitement process easy,
+            not just for the recruiter, but also the applicant. Our ChatBot
+            shortlists the applicants on the basis of a test conversation. The
+            applicant is supposed to answer a set of questions posed by the
+            ChatBot and on the basis of that gets a score. The applicant
+            receives this score and is informed whether they are selected or not
+            with a set of feedback for future.
+            <br />
+            <br /><br /><br />
+          </p>
+        </center>
+      </div>
+    </div>
+    <div class="container-fluid tab3">
+      <div class="row row-2">
+        <center>
+          <br /><br />
+          <h2>Why AI Recruiter?</h2>
+        </center>
+        <br /><br />
+        <div class="row">
+          <div class="col-sm-6 cols">
+            <center>
+              <i class="fa fa-transgender-alt icons"></i>
+              <h3>Diverse</h3>
+              <p>
+                Due to being a bot, it does not hold any human biases<br />
+                which allows every candidate to get a fair chance
+              </p>
+            </center>
+          </div>
+          <div class="col-sm-6 cols">
+            <center>
+              <i class="fa fa-line-chart  icons"></i>
+              <h3>Track progress</h3>
+              <p>
+                Helps applicants to keep track of their progress. <br />
+                This ensures that every application is being processed.
+              </p>
+            </center>
+          </div>
+        </div>
+        <br /><br /><br />
+        <div class="row">
+          <div class="col-sm-6 cols">
+            <center>
+              <i class="fa fa-fast-forward icons"></i>
+              <h3>Hassle-free</h3>
+              <p>
+                The process is very fast and hassle free<br />
+                for both the end users.
+              </p>
+            </center>
+          </div>
+          <div class="col-sm-6 cols">
+            <center>
+              <i class="fa fa-exchange icons"></i>
+              <h3>Transparency</h3>
+              <p>
+                It makes the whole recruitment <br />
+                process very transparent for the applicant.
+              </p>
+            </center>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+  </body>
 </html>
