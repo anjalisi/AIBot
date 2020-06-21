@@ -38,7 +38,7 @@ $resume=htmlentities($rows1['resume']);
 <div class="sidebar">
 	  <a class="first" href="dashboard-applicant.php">DASHBOARD</a>
 	  <a href="profile.php" class="active">PROFILE</a>
-	  <a href="#news">CHATBOT</a>
+	  <a href="chatbot.php">CHATBOT</a>
 	  <a href="faq.php">FAQ</a>
 	  <a href="logout.php">LOGOUT</a>
 	</div>
