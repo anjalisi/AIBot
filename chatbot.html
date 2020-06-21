@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Questionaire</title>
+    <title>Multi Step Bootstrap Form with animations</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
       rel="stylesheet"
@@ -18,16 +18,7 @@
 
     <!--PEN HEADER-->
     <header class="header">
-      <h1 class="header__title">Questionaire</h1>
-      <!-- <div class="header__btns btns">
-        <a
-          class="header__btn btn"
-          href="https://github.com/nat-davydova/multisteps-form"
-          title="Check on Github"
-          target="_blank"
-          >Check on Github</a
-        >
-      </div> -->
+      <h1 class="header__title">Interview Questionaire</h1>
     </header>
     <!--PEN CONTENT     -->
     <div class="content">
@@ -35,11 +26,7 @@
       <div class="content__inner">
         <div class="container">
           <!--content title-->
-          <h2 class="content__title content__title--m-sm"></h2>
-          <!--content title-->
-          <h2 class="content__title">
-            Click on 'Prev' and 'Next' buttons to navigate.
-          </h2>
+          <h2 class="content__title">Click on 'Prev' and 'Next' to navigate</h2>
         </div>
         <div class="container overflow-hidden">
           <!--multisteps-form-->
@@ -77,44 +64,44 @@
                     Q4
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q5
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q6
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q7
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q8
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q9
                   </button>
                   <button
-                    class="multisteps-form__progress-btn js-active"
+                    class="multisteps-form__progress-btn"
                     type="button"
-                    title="User Info"
+                    title="Address"
                   >
                     Q10
                   </button>
@@ -132,77 +119,32 @@
                   >
                     <h3 class="multisteps-form__title">Question 1</h3>
                     <p>
-                        How many triangles will be in the 6th shape.
+                      “Working in a holiday resort is a popular option for graduates wishing to see the world. It gives them the opportunity to experience foreign cultures, make friends and build lifelong memories. As the skills required for securing a job tend to be low, most graduates choose not to turn their experience into a career, but enjoy the time they spend abroad. But there is a dark side to this kind of casual work: often workers’ rights are ignored and they may find themselves working long hours for very little money, as holiday resorts often do not adhere to the standards we might expect in the UK”
                     </p>
-                    <img class = "image" src = "./images/q1.jpg" alt ="xyz" />
-                    <label class="container">One
-                        <input type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                      </label>
-                      
-                      <label class="container">Two
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      
-                      <label class="container">Three
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      
-                      <label class="container">Four
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                    <!-- <div class="multisteps-form__content">
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="First Name"
-                          />
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Last Name"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Login"
-                          />
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="email"
-                            placeholder="Email"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="password"
-                            placeholder="Password"
-                          />
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="password"
-                            placeholder="Repeat Password"
-                          />
-                        </div>
-                      </div> -->
+                    <p>
+                      Statement 1: Many graduates enjoy working in holiday resorts so much they choose to develop a career in hospitality.
+                    </p>
+                    <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                      <label for="question-1-answers-A">A) True </label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                      <label for="question-1-answers-B">B) False</label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                      <label for="question-1-answers-C">C) Cannot Say </label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+                      <label for="question-1-answers-D">D) None of the above</label>
+                  </div>
+              
+                  
                       <div class="button-row d-flex mt-4">
                         <button
                           class="btn btn-primary ml-auto js-btn-next"
@@ -219,48 +161,33 @@
                     class="multisteps-form__panel shadow p-4 rounded bg-white"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Your Address</h3>
-                    <div class="multisteps-form__content">
-                      <div class="form-row mt-4">
-                        <div class="col">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Address 1"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Address 2"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="City"
-                          />
-                        </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
-                          <select class="multisteps-form__select form-control">
-                            <option selected="selected">State...</option>
-                            <option>...</option>
-                          </select>
-                        </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Zip"
-                          />
-                        </div>
-                      </div>
+                    <h3 class="multisteps-form__title">Question 2</h3>
+                    <p>
+                      Working in a holiday resort is a popular option for graduates wishing to see the world. It gives them the opportunity to experience foreign cultures, make friends and build lifelong memories. As the skills required for securing a job tend to be low, most graduates choose not to turn their experience into a career, but enjoy the time they spend abroad. But there is a dark side to this kind of casual work: often workers’ rights are ignored and they may find themselves working long hours for very little money, as holiday resorts often do not adhere to the standards we might expect in the UK”
+                    </p>
+                    <p>
+                      Working in a holiday resort is a popular option for graduates wishing to see the world. It gives them the opportunity to experience foreign cultures, make friends and build lifelong memories. As the skills required for securing a job tend to be low, most graduates choose not to turn their experience into a career, but enjoy the time they spend abroad. But there is a dark side to this kind of casual work: often workers’ rights are ignored and they may find themselves working long hours for very little money, as holiday resorts often do not adhere to the standards we might expect in the UK”
+                    </p>
+                    <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                      <label for="question-1-answers-A">A) True </label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                      <label for="question-1-answers-B">B) False</label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                      <label for="question-1-answers-C">C) Cannot say</label>
+                  </div>
+                  
+                  <div>
+                      <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+                      <label for="question-1-answers-D">D) None of the above</label>
+                  </div>
+              
                       <div class="button-row d-flex mt-4">
                         <button
                           class="btn btn-primary js-btn-prev"
