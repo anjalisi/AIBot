@@ -54,7 +54,9 @@ body a {
 
 .content__title {
   margin-bottom: 40px;
-  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+ color: #66fcf1;
+  font-size: 120px;
   text-align: center;
 }
 
