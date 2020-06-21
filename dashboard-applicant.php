@@ -27,7 +27,7 @@ if(!isset($_SESSION['userid']))
 	  <a class="active first" href="dashboard-applicant.php">DASHBOARD</a>
 	  <a href="profile.php">PROFILE</a>
 	  <a href="#news">CHATBOT</a>
-	  <a href="#contact">ABOUT</a>
+	  <a href="faq.php">FAQ</a>
 	  <a href="logout.php">LOGOUT</a>
 	</div>
 <div class="content">
