@@ -22,10 +22,9 @@ if(!isset($_SESSION['recid']))
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">	
 </head>
 	<div class="sidebar">
-	  <a class="active first" href="dashboard-applicant.php">DASHBOARD</a>
+	  <a class="active first" href="dashboard-recruiter.php">DASHBOARD</a>
 	  <a href="shortlist.php">SHORTLISTED</a>
 	  <a href="interview.php">INTERVIEW</a>
-	  <a href="">CHATBOT</a>
 	  <a href="profile-recruiter.php">PROFILE</a>
 	  <a href="logout-recruiter.php">LOGOUT</a>
 	</div>
