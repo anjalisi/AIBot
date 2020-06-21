@@ -42,6 +42,7 @@ $email=$_SESSION['userid'];
 <div class="content container-fluid">
 	<center><h1>PSYCHOMETRIC <b>RESULTS</b></h1></center><br>
 	<?php
+        $answer1=0;$answer2=0;$answer3=0;$answer4=0;$answer5=0;$answer6=0;$answer7=0;$answer8=0;$answer9=0;$answer10=0;
 		$answer1 = $_POST['question-1-answers'];
         $answer2 = $_POST['question-2-answers'];
         $answer3 = $_POST['question-3-answers'];
@@ -55,97 +56,121 @@ $email=$_SESSION['userid'];
 
         $totalCorrect=0;
         if ($answer1 == "B") {
-        	$totalCorrect++; 
+        	$totalCorrect=$totalCorrect+5; 
      	}
-     	else if($answer1 !="")
+     	else if($answer1 !="B")
         {
         	echo ('<h2>ANSWER 1 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: FALSE (which was the second option)</p>";
         }
-        if ($answer2 == "A") { $totalCorrect++; }
-        else if($answer2 !="")
+        if ($answer2 == "C") {$totalCorrect=$totalCorrect+5;}
+        else if($answer2 !="C")
         {
         	echo ('<h2>ANSWER 2 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: CANNOT SAY(which was the 3rd option)</p>";
         }
-        if ($answer3 == "C") { $totalCorrect++; }
-        else if($answer3 !="")
+        if ($answer3 == "A") { $totalCorrect=$totalCorrect+5;}
+        else if($answer3 !="A")
         {
         	echo ('<h2>ANSWER 3 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was:TRUE (which was the 1st option)</p>";
         }
-        if ($answer4 == "D") { $totalCorrect++; }
-        else if($answer4 !="")
+        if ($answer4 == "A") { $totalCorrect=$totalCorrect+5; }
+        else if($answer4 !="A")
         {
         	echo ('<h2>ANSWER 4 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: 4,1,2,5,3 (which was the 1st option)</p>";
         }
-        if ($answer5 == "D") { $totalCorrect++; }
-        else if($answer5 !="")
+        if ($answer5 == "D") { $totalCorrect=$totalCorrect+5; }
+        else if($answer5 !="D")
         {
         	echo ('<h2>ANSWER 5 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: g (which was the 4th option)</p>";
         }
-        if ($answer6 == "D") { $totalCorrect++; }
-        else if($answer6 !="")
+        if ($answer6 == "C") { $totalCorrect=$totalCorrect+5; }
+        else if($answer6 !="C")
         {
         	echo ('<h2>ANSWER 6 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: 16.66%(which was the 3rd option)</p>";
         }
-        if ($answer7 == "D") { $totalCorrect++; }
-        else if($answer7 !="")
+        if ($answer7 == "A") { $totalCorrect=$totalCorrect+5; }
+        else if($answer7 !="A")
         {
         	echo ('<h2>ANSWER 7 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+        	echo "<br><p>The Correct Answer was: TRUE (which was the 1st option)</p>";
         }
-        if ($answer8 == "D") { $totalCorrect++; }
-        else if($answer8 !="")
+        if($answer8=="A")
         {
-        	echo ('<h2>ANSWER 8 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+            $totalCorrect++;
         }
-        if ($answer9 == "D") { $totalCorrect++; }
-        else if($answer9 !="")
+        else if($answer8=="B")
         {
-        	echo ('<h2>ANSWER 9 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+            $totalCorrect=$totalCorrect+2;
         }
-        if ($answer10 == "D") { $totalCorrect++; }
-        else if($answer10 !="")
+        else if($answer8=="C")
         {
-        	echo ('<h2>ANSWER 10 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:</p>";
+            $totalCorrect=$totalCorrect+3;
         }
-        echo "<div id='results'>$totalCorrect / 5 correct</div>";
-            if($totalCorrect>8)
+        else if($answer8=="D")
+        {
+            $totalCorrect=$totalCorrect+4;
+        }
+        else if($answer8=="E")
+        {
+            $totalCorrect=$totalCorrect+5;
+        }
+
+        if($answer9=="A")
+        {
+            $totalCorrect++;
+        }
+        else if($answer9=="B")
+        {
+            $totalCorrect=$totalCorrect+2;
+        }
+        else if($answer9=="C")
+        {
+            $totalCorrect=$totalCorrect+3;
+        }
+        else if($answer9=="D")
+        {
+            $totalCorrect=$totalCorrect+4;
+        }
+        else if($answer9=="E")
+        {
+            $totalCorrect=$totalCorrect+5;
+        }
+
+        if($answer8=="A")
+        {
+            $totalCorrect=$totalCorrect+5;
+            
+        }
+        else if($answer8=="B")
+        {
+            $totalCorrect=$totalCorrect+4;
+        }
+        else if($answer8=="C")
+        {
+            $totalCorrect=$totalCorrect+3;
+        }
+        else if($answer8=="D")
+        {
+            $totalCorrect=$totalCorrect+2;
+        }
+        else if($answer8=="E")
+        {
+            $totalCorrect++;
+        }
+        echo "<div id='results'><h1>$totalCorrect / 50</h1></div>";
+            if($totalCorrect>35)
             {	
-	            $stmt1= "select * from users where email=:email";
-				$rows1= $stmt1->fetch(PDO::FETCH_ASSOC);
-				$fname= htmlentities($rows1['firstn']);
-				$linkedin= htmlentities($rows1['linkedin']);
-				$resume=htmlentities($rows1['resume']);
-
-				$sql="INSERT INTO shortlists(fname,resume,linkedin, email, score)
-	 			values(:fname,:resume, :linkedin,:email,:score)";
-				$stmt = $pdo->prepare($sql);
-
-				$stmt->execute(array(
-					':fname' => $fname,
-					':resume' => $resume,
-					':email' => $email,
-					':linkedin' => $linkedin,
-					':score' => $totalCorrect,
-					':resume' => $_POST['resume'],
-					':pass' => $_POST['pass'],
-				));
-				
-
             	echo("<h2>CONGRATULATIONS !! You have passed<h2>");
             	echo "<p>Your interview will be scheduled as soon as the recruiters update us. </p>";
 
             }
             else
-            	echo("");
+            	echo("<h2>You have failed<h2>");
 	?>
 </div>
 </body>

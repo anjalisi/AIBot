@@ -15,7 +15,7 @@ $rows1= $stmt1->fetchAll(PDO::FETCH_ASSOC);
 $numrows1=count($rows1);
 
 
-$stmt2= $pdo->query("SELECT * FROM shortlists where score='9' or score='10'");
+$stmt2= $pdo->query("SELECT * FROM shortlists where score>'37'");
 $rows2= $stmt2->fetchAll(PDO::FETCH_ASSOC);
 $numrows2=count($rows2);
 ?>

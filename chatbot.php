@@ -53,7 +53,7 @@ if(!isset($_SESSION['userid']))
         <div class="container">
           
           <h3 class="content__title" style="color: #66fcf1;font-family: 'Bebas Neue', cursive;font-size: 30px;">
-            Click on steps or 'Prev' and 'Next' buttons
+            Click on steps/progress bar to navigate through the questions.
           </h3><br>
         </div>
         <div class="container overflow-hidden">
@@ -136,7 +136,7 @@ if(!isset($_SESSION['userid']))
                 </div>
               </div>
             </div>
-            <!--form panels-->
+            <!--form panels--><br><br>
             <div class="row">
               <div class="col-12 col-lg-8 m-auto">
                 <form class="multisteps-form__form">
@@ -192,15 +192,7 @@ if(!isset($_SESSION['userid']))
                         />
                         <label for="question-1-answers-C"> Cannot Say </label>
                       </div>
-                      <div class="button-row d-flex mt-4">
-                        <button
-                          class="btn btn-primary ml-auto js-btn-next"
-                          type="button"
-                          title="Next"
-                        >
-                          Next
-                        </button>
-                      </div>
+                  
                     </div>
                   </div>
                   <!--single form panel-->
@@ -255,22 +247,7 @@ if(!isset($_SESSION['userid']))
                         />
                         <label for="question-2-answers-C"> Cannot Say </label>
                       </div>
-                      <div class="button-row d-flex mt-4">
-                        <button
-                          class="btn btn-primary js-btn-prev"
-                          type="button"
-                          title="Prev"
-                        >
-                          Prev
-                        </button>
-                        <button
-                          class="btn btn-primary ml-auto js-btn-next"
-                          type="button"
-                          title="Next"
-                        >
-                          Next
-                        </button>
-                      </div>
+                      
                     </div>
                   </div>
                   <div
@@ -325,22 +302,7 @@ if(!isset($_SESSION['userid']))
                         />
                         <label for="question-3-answers-C"> Cannot Say </label>
                       </div>
-                      <div class="button-row d-flex mt-4">
-                        <button
-                          class="btn btn-primary js-btn-prev"
-                          type="button"
-                          title="Prev"
-                        >
-                          Prev
-                        </button>
-                        <button
-                          class="btn btn-primary ml-auto js-btn-next"
-                          type="button"
-                          title="Next"
-                        >
-                          Next
-                        </button>
-                      </div>
+                      
                     </div>
                   </div>
                   <div
@@ -388,22 +350,7 @@ if(!isset($_SESSION['userid']))
                       />
                       <label for="question-4-answers-C"> 1,3,5,4,2 </label>
                     </div>
-                    <div class="button-row d-flex mt-4">
-                      <button
-                        class="btn btn-primary js-btn-prev"
-                        type="button"
-                        title="Prev"
-                      >
-                        Prev
-                      </button>
-                      <button
-                        class="btn btn-primary ml-auto js-btn-next"
-                        type="button"
-                        title="Next"
-                      >
-                        Next
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
                 <div
@@ -462,22 +409,7 @@ if(!isset($_SESSION['userid']))
                     />
                     <label for="question-5-answers-E"> f </label>
                   </div>
-                  <div class="button-row d-flex mt-4">
-                    <button
-                      class="btn btn-primary js-btn-prev"
-                      type="button"
-                      title="Prev"
-                    >
-                      Prev
-                    </button>
-                    <button
-                      class="btn btn-primary ml-auto js-btn-next"
-                      type="button"
-                      title="Next"
-                    >
-                      Next
-                    </button>
-                  </div>
+                  
                 </div>
               </div>
               <div
@@ -528,22 +460,7 @@ if(!isset($_SESSION['userid']))
                       />
                       <label for="question-6-answers-D">d) 17.8% </label>
                     </div>
-                    <div class="button-row d-flex mt-4">
-                      <button
-                        class="btn btn-primary js-btn-prev"
-                        type="button"
-                        title="Prev"
-                      >
-                        Prev
-                      </button>
-                      <button
-                        class="btn btn-primary ml-auto js-btn-next"
-                        type="button"
-                        title="Next"
-                      >
-                        Next
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
                 <div
@@ -577,22 +494,7 @@ if(!isset($_SESSION['userid']))
                       />
                       <label for="question-7-answers-B"> False </label>
                     </div>
-                    <div class="button-row d-flex mt-4">
-                      <button
-                        class="btn btn-primary js-btn-prev"
-                        type="button"
-                        title="Prev"
-                      >
-                        Prev
-                      </button>
-                      <button
-                        class="btn btn-primary ml-auto js-btn-next"
-                        type="button"
-                        title="Next"
-                      >
-                        Next
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               <div
@@ -653,22 +555,7 @@ if(!isset($_SESSION['userid']))
                   />
                   <label for="question-8-answers-E"> Strongly Agree </label>
                 </div>
-                <div class="button-row d-flex mt-4">
-                  <button
-                    class="btn btn-primary js-btn-prev"
-                    type="button"
-                    title="Prev"
-                  >
-                    Prev
-                  </button>
-                  <button
-                    class="btn btn-primary ml-auto js-btn-next"
-                    type="button"
-                    title="Next"
-                  >
-                    Next
-                  </button>
-                </div>
+                
               </div>
             </div>
             <div
@@ -716,24 +603,6 @@ if(!isset($_SESSION['userid']))
                   value="D"
                 />
                 <label for="question-9-answers-D"> Organise paperwork and make sure everything works in order </label>
-              </div>
-
-              
-              <div class="button-row d-flex mt-4">
-                <button
-                  class="btn btn-primary js-btn-prev"
-                  type="button"
-                  title="Prev"
-                >
-                  Prev
-                </button>
-                <button
-                  class="btn btn-primary ml-auto js-btn-next"
-                  type="button"
-                  title="Next"
-                >
-                  Next
-                </button>
               </div>
             </div>
           </div>
@@ -786,13 +655,7 @@ if(!isset($_SESSION['userid']))
 
               
               <div class="button-row d-flex mt-4">
-                <button
-                  class="btn btn-primary js-btn-prev"
-                  type="button"
-                  title="Prev"
-                >
-                  Prev
-                </button>
+                
                 
               <button
                           class="btn btn-success ml-auto"
