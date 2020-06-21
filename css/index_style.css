@@ -58,10 +58,13 @@ h2
   color: #66fcf1;
   font-family: 'Roboto Slab', serif;
 }
-h3
+
+
+.row-2 h3
 {
   font-family: 'Bebas Neue', cursive;
   font-size: 20px;
+
 }
 .first
 {
@@ -70,8 +73,8 @@ h3
 }
 .row-1
 {
-  background-color: #05386B;
-  color: #EDF5E1;
+  background-color: #45a29e;
+  color: #0b0c10;
 }
 .row-1 h1
 {
@@ -90,8 +93,9 @@ p
 }
 .btn-color
 {
-  background-color: #C2CAD0;
-  color:#05386B;
+  background-color: #0b0c10;
+  color:#c5c6c7;
+  border-color: #66fcf1;
   padding: 1vw;
   margin-bottom: 5%;
   margin-left:20px;
@@ -99,7 +103,6 @@ p
 }
 .btn-color:hover
 {
-  box-shadow: 15px 15px 20px 0 #8EE4AF;
   color: #05386B;
   transition: ease-in-out 0.3s;
   background-color: #5CDB95;
@@ -108,18 +111,39 @@ p
 {
   background-color: #8EE4AF;
 }
+.row-3
+{
+  background-color: #1f2833;
+}
+.row-2
+{
+  background-color: #1a1a1d;
+}
+.row-3 h2
+{
+  font-size: 40px;
+  font-weight: bold;
+  color: #66fcf1;
+}
+.row-3 p
+{
+  margin: 20px;
+  font-size: 20px;
+  color: #c5c6c7;
+
+}
 .row-2 h2
 {
 
   font-size: 40px;
   font-weight: bold;
-  color: #05386B;
+  color: #66fcf1;
 }
 .row-2 p
 {
   margin: 20px;
   font-size: 20px;
-  color: #05386B;
+  color: #66fcf1;
 }
 .icons
 {
@@ -143,6 +167,6 @@ p
 }
 .cols h3
 {
-  color: #05386B;
-  font-size: 30px;
+  color: #c5c6c7;
+ font-size: 30px;
 }
