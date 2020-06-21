@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jun 21, 2020 at 11:02 AM
+-- Generation Time: Jun 21, 2020 at 01:07 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -43,7 +43,7 @@ CREATE TABLE `recruiter` (
 --
 
 INSERT INTO `recruiter` (`comp_id`, `company`, `email`, `website`, `linkedin`, `profile`, `password`) VALUES
-(1, 'Ricos', 'ricos@lalala.com', 'asdasd.com', 'asdas.com', 'Naukar', 'Naukar123'),
+(1, 'Ricos', 'ricos@lalala.com', 'ricos.com', 'asdas.com', 'Software Developer', 'Naukar123'),
 (2, 'Google', 'muskan@gmail.com', 'http//google.com', '', 'Software Developer', 'Anjali123');
 
 -- --------------------------------------------------------
@@ -67,7 +67,8 @@ CREATE TABLE `shortlists` (
 --
 
 INSERT INTO `shortlists` (`id`, `fname`, `resume`, `linkedin`, `email`, `score`, `company`) VALUES
-(1, 'Anjali', 'anjali.com', 'linkedin.in/anjali.com', 'anjali@gmail.com', 44, NULL);
+(1, 'Anjali', 'anjali.com', 'linkedin.in/anjali.com', 'muskan@gmail.com', 44, NULL),
+(2, 'Anjali', 'anjali.com', 'linkedin.in/anjali.com', 'muskan@gmail.com', 35, NULL);
 
 -- --------------------------------------------------------
 
@@ -91,10 +92,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `firstn`, `lastn`, `email`, `dob`, `linkedin`, `resume`, `password`) VALUES
-(1, 'Anjali', 'Singh', 'muskan@gmail.com', '1999-12-03', 'naaaaaaaaaaa.com', 'www.google.com', 'Anjali123'),
+(1, 'Anjali', 'Singh', 'muskan@gmail.com', '1999-12-03', 'linkedin.in/anjali.com', 'anjali.com', 'Anjali123'),
 (3, 'Taniya', 'Rawat', 'tanu2599@gmail.com', '1999-06-25', 'blah', 'blah', 'Lalala123'),
 (4, 'CUTE ', 'BABY', 'cutestbabyintheworld@cutebaby.com', '2003-06-04', 'NAAAAAAAA.com', 'CUTEBABY.com', 'Cutestbaby1'),
-(5, 'Taniya', 'Rawat ', 'louveju@gmail.com', '1999-06-25', 'https//kyakrogedekhkeurl.com', 'None', 'Blah1234567');
+(5, 'Taniya', 'Rawat ', 'louveju@gmail.com', '1999-06-25', 'https//kyakrogedekhkeurl.com', 'None', 'Blah1234567'),
+(6, 'Cutu', 'Baby', 'cutestbaby@cute.com', '2003-06-04', '', 'www.google.com', 'Iamthecutest1');
 
 --
 -- Indexes for dumped tables
@@ -132,13 +134,13 @@ ALTER TABLE `recruiter`
 -- AUTO_INCREMENT for table `shortlists`
 --
 ALTER TABLE `shortlists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -38,7 +38,8 @@ if(!isset($_SESSION['userid']))
 	</nav>
 </div>
 <div class="content container-fluid">
-	<center><h1>INTERVIEW <b>GUIDER</b></h1></center><br>
+	<center><h1>INTERVIEW <b>GUIDER</b></h1><br>
+	</center>
 	<center><p>Hi, we will be guiding you through your selection & interview process.</p></center><br>
 	<div class="row">
 		<div class="col-sm-2">

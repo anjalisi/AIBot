@@ -50,7 +50,6 @@ $numrows2=count($rows2);
 		<center><h1>Your<b> Dashboard</b></h1></center><br>
 		<center>
 	<div class="row">
-	
 		<div class="card col-sm-10">
 			<h2>
 				<center>1. How many candidates have taken the test?</center>
@@ -80,7 +79,7 @@ $numrows2=count($rows2);
 				<center>3. How many candidates have the top scores?</center>
 			</h2>
 			<center><p><?=$numrows2?> candidates have the top scores.</p>
-			<p>A candidate is considered to be a top scorer when they have a score above 9 (out of 10). The list is present under the "Shortlist" tag in the Menu Card.</p>
+			<p>A candidate is considered to be a top scorer when they have a score above 37. The list is present under the "Shortlist" tag in the Menu Card.</p>
 				<br></center>
 		</div>
 	

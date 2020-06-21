@@ -7,6 +7,14 @@ if(!isset($_SESSION['userid']))
 	return;
 }
 $email=$_SESSION['userid'];
+
+$stmt= $pdo->query("SELECT * FROM users where email='$email'");
+$rows1= $stmt->fetch(PDO::FETCH_ASSOC);
+$fname= htmlentities($rows1['firstn']);
+$linkedin= htmlentities($rows1['linkedin']);
+$resume=htmlentities($rows1['resume']);
+
+                
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +50,13 @@ $email=$_SESSION['userid'];
 <div class="content container-fluid">
 	<center><h1>PSYCHOMETRIC <b>RESULTS</b></h1></center><br>
 	<?php
+    $stmt= $pdo->query("SELECT * FROM users where email='$email'");
+$rows1= $stmt->fetch(PDO::FETCH_ASSOC);
+$fname= htmlentities($rows1['firstn']);
+$linkedin= htmlentities($rows1['linkedin']);
+$resume=htmlentities($rows1['resume']);
+
+   
         $answer1=0;$answer2=0;$answer3=0;$answer4=0;$answer5=0;$answer6=0;$answer7=0;$answer8=0;$answer9=0;$answer10=0;
 		$answer1 = $_POST['question-1-answers'];
         $answer2 = $_POST['question-2-answers'];
@@ -164,10 +179,20 @@ $email=$_SESSION['userid'];
         }
         echo "<div id='results'><h1>$totalCorrect / 50</h1></div>";
             if($totalCorrect>35)
-            {	
+            {
+                $sql="INSERT INTO shortlists(fname,resume,linkedin, email, score)
+                values(:fname,:resume, :linkedin,:email,:score)";
+                $stmt = $pdo->prepare($sql);
+
+                $stmt->execute(array(
+                    ':fname' => $fname,
+                    ':resume' => $resume,
+                    ':email' => $email,
+                    ':linkedin' => $linkedin,
+                    ':score' => $totalCorrect,
+                ));	
             	echo("<h2>CONGRATULATIONS !! You have passed<h2>");
             	echo "<p>Your interview will be scheduled as soon as the recruiters update us. </p>";
-
             }
             else
             	echo("<h2>You have failed<h2>");
