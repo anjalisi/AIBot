@@ -58,124 +58,163 @@ $resume=htmlentities($rows1['resume']);
 
    
         $answer1=0;$answer2=0;$answer3=0;$answer4=0;$answer5=0;$answer6=0;$answer7=0;$answer8=0;$answer9=0;$answer10=0;
-		$answer1 = $_POST['question-1-answers'];
-        $answer2 = $_POST['question-2-answers'];
-        $answer3 = $_POST['question-3-answers'];
-        $answer4 = $_POST['question-4-answers'];
-        $answer5 = $_POST['question-5-answers'];
-        $answer6 = $_POST['question-6-answers'];
-        $answer7 = $_POST['question-7-answers'];
-        $answer8 = $_POST['question-8-answers'];
-        $answer9 = $_POST['question-9-answers'];
-        $answer10 = $_POST['question-10-answers'];
+		// $answer1 = $_POST['question-1-answers'];
+        // $answer2 = $_POST['question-2-answers'];
+        // $answer3 = $_POST['question-3-answers'];
+        // $answer4 = $_POST['question-4-answers'];
+        // $answer5 = $_POST['question-5-answers'];
+        // $answer6 = $_POST['question-6-answers'];
+        // $answer7 = $_POST['question-7-answers'];
+        // $answer8 = $_POST['question-8-answers'];
+        // $answer9 = $_POST['question-9-answers'];
+        // $answer10 = $_POST['question-10-answers'];
 
         $totalCorrect=0;
-        if ($answer1 == "B") {
-        	$totalCorrect=$totalCorrect+5; 
-     	}
-     	else if($answer1 !="B")
+        if(isset($_POST['question-1-answers']))
         {
-        	echo ('<h2>ANSWER 1 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: FALSE (which was the second option)</p>";
+            $answer1 = $_POST['question-1-answers'];
+            if ($answer1 == "B") {
+                $totalCorrect=$totalCorrect+5; 
+            }
+     	    else if($answer1 !="B")
+            {
+        	    echo ('<h2>ANSWER 1 IS INCORRECT !</h2>');
+            	echo "<br><p>The Correct Answer was: FALSE (which was the second option)</p>";
+           }
         }
-        if ($answer2 == "C") {$totalCorrect=$totalCorrect+5;}
-        else if($answer2 !="C")
+        if(isset($_POST['question-2-answers']))
         {
-        	echo ('<h2>ANSWER 2 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: CANNOT SAY(which was the 3rd option)</p>";
+            $answer2 = $_POST['question-2-answers'];
+            if ($answer2 == "C") {$totalCorrect=$totalCorrect+5;}
+            else if($answer2 !="C")
+            {
+                echo ('<h2>ANSWER 2 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was: CANNOT SAY(which was the 3rd option)</p>";
+            }
         }
-        if ($answer3 == "A") { $totalCorrect=$totalCorrect+5;}
-        else if($answer3 !="A")
+        if(isset($_POST['question-3-answers']))
         {
-        	echo ('<h2>ANSWER 3 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was:TRUE (which was the 1st option)</p>";
+            $answer3 = $_POST['question-3-answers'];
+            if ($answer3 == "A") { $totalCorrect=$totalCorrect+5;}
+            else if($answer3 !="A")
+            {
+                echo ('<h2>ANSWER 3 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was:TRUE (which was the 1st option)</p>";
+            }
         }
-        if ($answer4 == "A") { $totalCorrect=$totalCorrect+5; }
-        else if($answer4 !="A")
+        if(isset($_POST['question-4-answers']))
         {
-        	echo ('<h2>ANSWER 4 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: 4,1,2,5,3 (which was the 1st option)</p>";
+            $answer4 = $_POST['question-4-answers'];
+            if ($answer4 == "A") { $totalCorrect=$totalCorrect+5; }
+            else if($answer4 !="A")
+            {
+                echo ('<h2>ANSWER 4 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was: 4,1,2,5,3 (which was the 1st option)</p>";
+            }
         }
-        if ($answer5 == "D") { $totalCorrect=$totalCorrect+5; }
-        else if($answer5 !="D")
+        if(isset($_POST['question-5-answers']))
         {
-        	echo ('<h2>ANSWER 5 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: g (which was the 4th option)</p>";
+            $answer2 = $_POST['question-5-answers'];
+            if ($answer5 == "D") { $totalCorrect=$totalCorrect+5; }
+            else if($answer5 !="D")
+            {
+                echo ('<h2>ANSWER 5 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was: g (which was the 4th option)</p>";
+            }
         }
-        if ($answer6 == "C") { $totalCorrect=$totalCorrect+5; }
-        else if($answer6 !="C")
+        if(isset($_POST['question-6-answers']))
         {
-        	echo ('<h2>ANSWER 6 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: 16.66%(which was the 3rd option)</p>";
+            $answer6 = $_POST['question-6-answers'];
+            if ($answer6 == "C") { $totalCorrect=$totalCorrect+5; }
+            else if($answer6 !="C")
+            {
+                echo ('<h2>ANSWER 6 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was: 16.66%(which was the 3rd option)</p>";
+            }
         }
-        if ($answer7 == "A") { $totalCorrect=$totalCorrect+5; }
-        else if($answer7 !="A")
+        if(isset($_POST['question-7-answers']))
         {
-        	echo ('<h2>ANSWER 7 IS INCORRECT !</h2>');
-        	echo "<br><p>The Correct Answer was: TRUE (which was the 1st option)</p>";
+            $answer7 = $_POST['question-7-answers'];
+            if ($answer7 == "A") { $totalCorrect=$totalCorrect+5; }
+            else if($answer7 !="A")
+            {
+                echo ('<h2>ANSWER 7 IS INCORRECT !</h2>');
+                echo "<br><p>The Correct Answer was: TRUE (which was the 1st option)</p>";
+            }
         }
-        if($answer8=="A")
+        if(isset($_POST['question-8-answers']))
         {
-            $totalCorrect++;
+            $answer8 = $_POST['question-8-answers'];
+            if($answer8=="A")
+            {
+                $totalCorrect++;
+            }
+            else if($answer8=="B")
+            {
+                $totalCorrect=$totalCorrect+2;
+            }
+            else if($answer8=="C")
+            {
+                $totalCorrect=$totalCorrect+3;
+            }
+            else if($answer8=="D")
+            {
+                $totalCorrect=$totalCorrect+4;
+            }
+            else if($answer8=="E")
+            {
+                $totalCorrect=$totalCorrect+5;
+            }
         }
-        else if($answer8=="B")
+        if(isset($_POST['question-9-answers']))
         {
-            $totalCorrect=$totalCorrect+2;
+            $answer9 = $_POST['question-9-answers'];
+            if($answer9=="A")
+            {
+                $totalCorrect++;
+            }
+            else if($answer9=="B")
+            {
+                $totalCorrect=$totalCorrect+2;
+            }
+            else if($answer9=="C")
+            {
+                $totalCorrect=$totalCorrect+3;
+            }
+            else if($answer9=="D")
+            {
+                $totalCorrect=$totalCorrect+4;
+            }
+            else if($answer9=="E")
+            {
+                $totalCorrect=$totalCorrect+5;
+            }
         }
-        else if($answer8=="C")
+        if(isset($_POST['question-10-answers']))
         {
-            $totalCorrect=$totalCorrect+3;
-        }
-        else if($answer8=="D")
-        {
-            $totalCorrect=$totalCorrect+4;
-        }
-        else if($answer8=="E")
-        {
-            $totalCorrect=$totalCorrect+5;
-        }
+            $answer10 = $_POST['question-10-answers'];
 
-        if($answer9=="A")
-        {
-            $totalCorrect++;
-        }
-        else if($answer9=="B")
-        {
-            $totalCorrect=$totalCorrect+2;
-        }
-        else if($answer9=="C")
-        {
-            $totalCorrect=$totalCorrect+3;
-        }
-        else if($answer9=="D")
-        {
-            $totalCorrect=$totalCorrect+4;
-        }
-        else if($answer9=="E")
-        {
-            $totalCorrect=$totalCorrect+5;
-        }
-
-        if($answer8=="A")
-        {
-            $totalCorrect=$totalCorrect+5;
-            
-        }
-        else if($answer8=="B")
-        {
-            $totalCorrect=$totalCorrect+4;
-        }
-        else if($answer8=="C")
-        {
-            $totalCorrect=$totalCorrect+3;
-        }
-        else if($answer8=="D")
-        {
-            $totalCorrect=$totalCorrect+2;
-        }
-        else if($answer8=="E")
-        {
-            $totalCorrect++;
+            if($answer10=="A")
+            {
+                $totalCorrect=$totalCorrect+5;
+                
+            }
+            else if($answer10=="B")
+            {
+                $totalCorrect=$totalCorrect+4;
+            }
+            else if($answer10=="C")
+            {
+                $totalCorrect=$totalCorrect+3;
+            }
+            else if($answer10=="D")
+            {
+                $totalCorrect=$totalCorrect+2;
+            }
+            else if($answer10=="E")
+            {
+                $totalCorrect++;
+            }
         }
         echo "<div id='results'><h1>$totalCorrect / 50</h1></div>";
             if($totalCorrect>35)
